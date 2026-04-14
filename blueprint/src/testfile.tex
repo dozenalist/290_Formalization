@@ -1,0 +1,25 @@
+% This is a test file for lean blueprint and the website. %
+
+\section{Test}
+
+\begin{definition} [Even]
+  \label{def:Even}
+  \lean{Even}
+  \leanok
+  We say that a number is Even if and only if it is even.
+\end{definition}
+
+\begin{theorem}
+  \label{thm:Even_four}
+  \uses{def:Even}
+  \lean{Even_four}
+  \leanok
+  Four is Even.
+\end{theorem}
+\begin{proof}
+  \leanok
+  \[
+  4 = 2 \cdot 2.
+  \]
+\end{proof}
+
