@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1776211850.84384 "print.tex" "C:/Users/carte/lean/290_Formalization/blueprint/print/print.pdf" "print" 1776211852.74157 0
-  "C:/Users/carte/lean/290_Formalization/blueprint/print/print.aux" 1776211852 1402 02a3a3100153baa967082b6dbc3fef0c "pdflatex"
-  "C:/Users/carte/lean/290_Formalization/blueprint/print/print.out" 1776211852 1229 a1a2816e18a77135de1b1e7d060c0550 "pdflatex"
+["pdflatex"] 1776212650.20699 "print.tex" "C:/Users/carte/lean/290_Formalization/blueprint/print/print.pdf" "print" 1776212652.16941 0
+  "C:/Users/carte/lean/290_Formalization/blueprint/print/print.aux" 1776212651 1339 64b64349fb0966bc87a26fbb1ad56947 "pdflatex"
+  "C:/Users/carte/lean/290_Formalization/blueprint/print/print.out" 1776212651 860 e30f8e29493bd651c88d8fc59368d07e "pdflatex"
   "Ch01.tex" 1776210628 0 d41d8cd98f00b204e9800998ecf8427e ""
   "Ch02.tex" 1776211283 0 d41d8cd98f00b204e9800998ecf8427e ""
   "Ch03.tex" 1776211288 0 d41d8cd98f00b204e9800998ecf8427e ""
@@ -92,7 +92,7 @@
   "c:/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749156342 42148 61becc7c670cd061bb319c643c27fdd4 ""
   "c:/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt" 1749167090 5890108 9fe61e3d9965bab3584e80916f40d468 ""
   "c:/texlive/2025/texmf.cnf" 1749166961 713 e69b156964470283e0530f5060668171 ""
-  "content.tex" 1776211816 750 233da7a87ccebb25f8b865a539b563d4 ""
+  "content.tex" 1776212637 760 301efe77d911017f90e97da037480274 ""
   "macros/common.tex" 1776195654 820 60fafcc3aa944a5e60030581a943ef6b ""
   "macros/print.tex" 1776195654 1101 87627b2ec24fef68edc71c13f43f7bab ""
   "print.tex" 1776211816 1194 df1fd2ad2de0001756179f9b2339077c ""
