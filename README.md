@@ -1,6 +1,8 @@
 # 290 Formalization
 
-Links : [Website](https://dozenalist.github.io/290Formalization/) [Dependency Graph](https://dozenalist.github.io/290Formalization/dep_graph_document.html)
+Links : 
+[Website](https://dozenalist.github.io/290Formalization/) 
+[Dependency Graph](https://dozenalist.github.io/290Formalization/dep_graph_document.html)
 
 Ch01 - Type Theory
 
