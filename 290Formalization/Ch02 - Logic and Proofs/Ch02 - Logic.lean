@@ -278,8 +278,9 @@ Three standard proof styles are:
 * contrapositive proof: prove `¬ Q → ¬ P` instead of `P → Q`;
 * contradiction: derive `False` from incompatible assumptions.
 
-The first two are constructive. A fully classical proof by contradiction,
-where one assumes `¬ P` and deduces `P`, will be discussed in the next section.
+The first one is constructive; the other two require the law of the excluded middle.
+A fully classical proof by contradiction, where one assumes `¬ P` and deduces `P`,
+will be discussed in the next section.
 -/
 
 section ProofTechniques
