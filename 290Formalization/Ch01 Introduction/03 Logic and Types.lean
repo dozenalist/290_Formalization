@@ -1,5 +1,5 @@
-import «290Formalization».«Ch01 - Type Theory».«Ch01 - Type Theory»
-
+-- import «290Formalization».«Ch01 - Type Theory».«Ch01 - Type Theory»
+import Mathlib.Tactic
 
 /-!
 # Logic in Lean
