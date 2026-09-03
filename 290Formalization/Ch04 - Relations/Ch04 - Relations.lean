@@ -1,5 +1,6 @@
-import «290Formalization».«Ch03 - Induction».«Ch03 - Induction»
+-- import «290Formalization».«Ch03 - Induction».«Ch03 - Induction»
 import Mathlib.Order.Defs.Unbundled
+import Mathlib.Tactic
 
 /-!
 # Relations in Lean
@@ -178,7 +179,7 @@ On natural numbers, `≤` is reflexive and transitive, but not symmetric.
 
 theorem natLe_reflexive : Reflexive natLe := by
   intro n
-  exact le_rfl
+  exact Nat.le_refl n
 
 theorem natLe_transitive : Transitive natLe := by
   intro a b c hab hbc
@@ -206,7 +207,7 @@ theorem natLt_transitive : Transitive natLt := by
 theorem natLt_not_reflexive : ¬ Reflexive natLt := by
   intro hRefl
   have h00 : natLt 0 0 := hRefl 0
-  exact lt_irrefl 0 h00
+  exact Nat.lt_irrefl 0 h00
 
 /-!
 ### Divisibility
@@ -216,7 +217,8 @@ Divisibility is reflexive and transitive on `Nat`.
 
 theorem divides_reflexive : Reflexive divides := by
   intro n
-  exact dvd_rfl
+  use 1
+  ring
 
 theorem divides_transitive : Transitive divides := by
   intro a b c hab hbc
