@@ -38,7 +38,7 @@ static typing and strong typing together.
 
 Since every datum, which we call a term, must be an instance of a type, we ought to start by
 defining a type. A type in Lean is defined as the aggregate of its constructors. To see this in
-action, let's consider how should define the natural numbers (beginning with zero) as a type in
+action, let's consider how we should define the natural numbers (beginning with zero) as a type in
 Lean.
 -/
 
@@ -54,18 +54,17 @@ constructors. The first constructor is registered with the binder `zero` as an i
 the naturals.
 
 * Zero exists and is a natural number.
-* If you have a natural number then the successor produces a new natural number.
+* Given any natural number, its successor is also a natural number.
 
-Here we defined our natural numbers using `CopyNat` instead of `Nat` as `Nat` is already
-defined in MathLib. Further, we have defined our model of the natural numbers in the same way
-as MathLib. We have purposefully done this such that this text will have access to the many
-tools and structures available in it. For example, MathLib provides `ℕ` as an alias for `Nat`
-for ease of use. Additionally, it provides the standard decimal numerals as aliases for
-instances of `ℕ`. For example, we can write `4` instead of `succ (succ (succ (succ zero)))`.
-For this benefit, we will continue to build from MathLib for the remainder of the text.
+Here we named our natural number definition `CopyNat` instead of `Nat`, because `Nat` is already
+defined in Lean's built-in MathLib library. Note that our `CopyNat` definition is identical to that
+of MathLib's `Nat`. As such, in order to take advantage of the many tools and structures available
+in MathLib, we will use `Nat` for the remainder of the text. For example, MathLib provides the
+convenient alias `ℕ` to abbreviate `Nat`. Additionally, the standard decimal numerals are aliases
+for instances of `ℕ`. That is, to represent the number four, we can write `4` instead of the
+unwieldy expression `succ (succ (succ (succ zero)))`.
 
-A more detailed explanation of these modeling decisions for `ℕ` is presented in the next
-section.
+A more detailed explanation of these modeling decisions for `ℕ` is presented in the next section.
 -/
 
 #eval Nat.succ (Nat.succ (Nat.succ (Nat.succ Nat.zero)))
@@ -81,7 +80,7 @@ First, let's recall how we do this informally, using the binder `fib`. Given a t
 `ℕ`, we do the following:
 
 * If our term matches the form `zero` (or `0`), we produce `0`.
-* Otherwise, if our term matches the form `succ zero` (or `1`) then we produce `1`.
+* Otherwise, if our term matches the form `succ zero` (or equivalently, `1`) then we produce `1`.
 * Otherwise, if our term matches the form `succ (succ n)` (or `n + 2`) for some `n : ℕ` then we
   produce `fib (succ n) + fib n` (or `fib (n + 1) + fib n`).
 -/
@@ -102,10 +101,10 @@ def fib : ℕ → ℕ
 /-!
 # Defining Addition on ℕ
 
-Notice that we used `+` in our definition of `fib`. We can do this because it is already
-defined in MathLib. In this text, we will sometimes leave this kind of explanation here
-instead of rebuilding everything from scratch. In this instance, we will leave the full
-explanation to the next section.
+Notice that we used the addition operator `+` in our definition of `fib`. We can do this because it
+is already defined in MathLib. In this text, we will sometimes leave only a brief note like this one
+instead of rebuilding everything from scratch, but not this time. Addition can be defined as
+follows:
 -/
 
 def add : ℕ → ℕ → ℕ
@@ -157,8 +156,8 @@ an instance of `ℕ → NatList → NatList`. These constructors are representat
 two axioms defining the list structure (on natural numbers).
 
 * The empty list (of naturals) exists and is a list (of naturals).
-* If you have a natural number and a list (of naturals) then you can produce a new list (of
-  naturals) by prepending said natural number to the front of the existing list (of naturals).
+* If you have a natural number and a list of naturals, then by prepending the aforementioned natural
+  to the list, you produce a new list of naturals.
 -/
 
 /-!
@@ -212,7 +211,7 @@ section UnderTheHood
 -/
 
 /-!
-# The Lean Program Archictecture
+# The Lean Program Architecture
 
 Now, how does any of this allow Lean to verify mathematical proofs? In short, it doesn't, at
 least not alone. When we think of a programming language, we often think only of that
